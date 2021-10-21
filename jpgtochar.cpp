@@ -6,13 +6,15 @@
 size_t filesize;
 socket.send(boost::asio::buffer(JpgToChar(filesize), filesize));
 
- unsigned char buff[11585];
-            size_t bytes_transferred = socket.receive(boost::asio::buffer(buff));
-            size_t size = sizeof(buff) / sizeof(buff[0]);
-            BufferToJpg(buff, size);
+unsigned char buff[11585];
+size_t bytes_transferred = socket.receive(boost::asio::buffer(buff));
+size_t size = sizeof(buff) / sizeof(buff[0]);
+BufferToJpg(buff, size);
 
 
-using namespace std;
+///
+// POBACAN KOD, NEKE SU FUNKCIJE ZA KLIJENTA NEKE ZA SERVER //
+///
 
 void BufferToJpg(unsigned char* output, size_t &size) {
 
