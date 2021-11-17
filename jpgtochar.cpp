@@ -12,9 +12,7 @@ size_t size = sizeof(buff) / sizeof(buff[0]);
 BufferToJpg(buff, size);
 
 
-///
-// POBACAN KOD, NEKE SU FUNKCIJE ZA KLIJENTA NEKE ZA SERVER //
-///
+
 
 void BufferToJpg(unsigned char* output, size_t &size) {
 
